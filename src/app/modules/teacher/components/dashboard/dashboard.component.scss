@@ -1,0 +1,284 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Roboto, sans-serif;
+}
+
+.charts-section-div {
+    .charts-section-col {
+        padding: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        .chart-section-second {
+            height: 100%;
+
+            img {
+                width: 50%;
+                height: 100%;
+                padding-right: 5px;
+            }
+
+            img:last-child {
+                padding-left: 5px;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+
+
+.main-content {
+    padding: 6rem 2rem 2rem;
+    flex: 1;
+
+    h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .breadcrumb {
+        color: #666;
+        margin: 0.5rem 0 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+.metrics-grid {
+    margin-bottom: 2rem;
+
+    .metric-card {
+        button {
+            width: 95%;
+            height: 45px;
+            margin: 0 auto;
+            border-radius: 30px;
+            align-items: center;
+            background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+            border: 0;
+            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            display: flex;
+            font-family: Phantomsans, sans-serif;
+            font-size: 24px;
+            justify-content: center;
+            line-height: 1em;
+            max-width: 100%;
+            min-width: 140px;
+            padding: 12px 24px;
+        }
+    }
+}
+
+.charts-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+
+    .temperature-chart,
+    .usage-charts {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .chart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        h2 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .chart-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            .date-range {
+                color: #666;
+                font-size: 0.9rem;
+            }
+
+            button {
+                padding: 0.5rem 1rem;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background: white;
+                color: #666;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 0.9rem;
+                transition: all 0.2s ease;
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    fill: currentColor;
+                }
+
+                &:hover {
+                    background: #f5f5f5;
+                }
+
+                &.more-btn {
+                    padding: 0.5rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .chart-legend {
+        margin-top: 1rem;
+        display: flex;
+        gap: 2rem;
+        font-size: 0.8rem;
+        color: #666;
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            .legend-line {
+                width: 20px;
+                height: 2px;
+                border-radius: 1px;
+
+                &.blue {
+                    background-color: #2196f3;
+                }
+
+                &.gray {
+                    background-color: #666;
+                }
+            }
+        }
+    }
+
+    .usage-charts {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        h2 {
+            margin: 0 0 1rem;
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+
+    #temperatureChart {
+        height: 300px !important;
+        width: 100% !important;
+    }
+
+    #usageByDaysChart,
+    #usageByDeviceChart {
+        height: 200px !important;
+    }
+}
+
+:host ::ng-deep .Guard-Dashboard {
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0;
+
+    }
+
+    .p-dialog {
+        width: 100%;
+        max-width: 750px;
+        background-color: #FFF;
+        border-radius: 1.5rem;
+    }
+
+    .image-container {
+        text-align: center;
+    }
+
+    .modal-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 767px) {
+    :host ::ng-deep .Guard-Dashboard {
+        .p-dialog {
+            width: 100%;
+            max-width: 90%;
+        }
+    }
+}
+
+.microsoft-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    button {
+        width: 46px;
+        height: 46px;
+
+        a {
+            filter: brightness(0) saturate(100%) invert(40%) sepia(11%) saturate(6%) hue-rotate(16deg) brightness(97%) contrast(86%);
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+.loader-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.spinner {
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

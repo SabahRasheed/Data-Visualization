@@ -1,0 +1,328 @@
+<div class="bg-white shadow-md p-4 sticky top-0 z-1">
+    <div class="max-w-7xl mx-auto flex justify-content-between align-items-center">
+        <div class="flex align-items-center	gap-3 text-2xl font-bold text-black-alpha-90">
+            <img src="/assets/image/dataA-logo.png" width="60" height="60">
+            <h1>IoTGuard</h1>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex align-items-center w-full justify-content-end gap-3">
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+                (click)="global.goToPage('/teacher/home')">Home</span>
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+                (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+                (click)="global.goToPage('/teacher/about')">About</span>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+            <button (click)="toggleMenu()" class="text-gray-700 focus:outline-none text-2xl">
+                ☰
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div *ngIf="menuOpen" class="md:hidden flex flex-column gap-3 mt-4 px-4">
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+            (click)="global.goToPage('/teacher/home')">Home</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+            (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+            (click)="global.goToPage('/teacher/about')">About</span>
+    </div>
+</div>
+<main>
+    <section id="hero" class="light-text" data-vide-bg="mp4: https://video.thingsboard.io/tb-cover2.mp4,
+											  webm: https://video.thingsboard.io/tb-cover2.webm,
+											  ogv: https://video.thingsboard.io/tb-cover2.ogv,
+											  poster: https://img.thingsboard.io/tb-cover.webp"
+        data-vide-options="bgColor: #000000, loop: true, muted: true, posterType: webp">
+        <div
+            style="position: absolute; z-index: -1; inset: 0px; overflow: hidden; background-size: cover; background-color: rgb(0, 0, 0); background-repeat: no-repeat; background-position: 50% 50%; background-image: none;">
+            <video autoplay="" loop="" preload="auto" muted=""
+                style="margin: auto; position: absolute; z-index: -1; top: 50%; left: 50%; transform: translate(-50%, -50%); visibility: visible; opacity: 1; width: auto; height: 851px;"
+                __idm_id__="737281">
+                <source src="https://video.thingsboard.io/tb-cover2.mp4" type="video/mp4">
+                <source src="https://video.thingsboard.io/tb-cover2.webm" type="video/webm">
+                <source src="https://video.thingsboard.io/tb-cover2.ogv" type="video/ogg">
+            </video>
+        </div>
+        <div class="video-cover"></div>
+
+        <div id="hero-content" class="">
+            <span class="header-animation tb-title">IoTGuard</span>
+            <span class="header-animation tb-title">Real-Time IoT Security Platform</span>
+            <h4 class="header-animation tb-sub-title">Automated
+                threat detection, machine learning-driven security analytics for your IoT ecosystem</h4>
+            <div class="header-animation">
+                <a href="#intro" class="button learn-tb">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="overflow">
+        <section id="intro">
+            <div class="main-div">
+                <h1><a href="docs/getting-started-guides/what-is-thingsboard/">IoTGuard</a> is a Real-time IoT
+                    security platform for automated threat detection,
+                    advanced analytics, and proactive device protection</h1>
+                <h2 class="second in-the-past-h1">It enables advanced machine
+                    learning algorithms—Random Forest and XGBoost—for real-time threat analysis,
+                    ensuring robust security across diverse IoT environments. IoTGuard offers scalability,
+                    adaptability, and continuous performance to effectively safeguard your IoT infrastructure.</h2>
+            </div>
+        </section>
+
+        <section id="manage">
+            <div class="main-div">
+                <div id="features-top">
+                    <div class="background">
+                        <div class="main1"></div>
+                        <div class="small1"></div>
+                        <div class="small2"></div>
+                        <div class="small3"></div>
+                        <div class="small4"></div>
+                    </div>
+                    <div class="blocks vis">
+                        <div class="visualize">
+                            <img class="vis2" src="/assets/image/dashboard-img-2.jpg" alt="Common chart with points"
+                                style="width: 600px;" loading="lazy">
+                        </div>
+                        <div class="feature-des"><span class="phrase-heading">Collect and analyze data</span>
+                            <p>Gather, store, and
+                                interpret IoT security data in real time. Securely share insights with your team.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="scada">
+            <div class="main-div">
+                <div id="features-top-1">
+                    <div class="background">
+                        <div class="main2"></div>
+                    </div>
+                    <div class="blocks scada">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="react">
+            <div class="main-div">
+                <div id="features-top-2">
+                    <div class="background">
+                        <div class="main3"></div><img src="https://img.thingsboard.io/grid.svg" alt="Grid background"
+                            loading="lazy">
+                        <div class="small5"></div>
+                        <div class="small6"></div>
+                    </div>
+                    <div class="blocks dark">
+                        <div class="process">
+                            <img class="add-rule" src="/assets/image/dashboard-img.png" alt="Add rule node example"
+                                width="626" height="482" loading="lazy">
+                        </div>
+                        <div class="feature-des contentabc"><span class="phrase-heading">Monitor and Mitigate</span>
+                            <p>Stay ahead of potential risks
+                                with real-time alerts whenever data deviates from expected parameters or indicates
+                                security threats.
+                                IoTGuard automatically flags suspicious activities, raises notifications, and enables
+                                swift responses—
+                                whether by isolating compromised devices or prompting immediate user actions.</p>
+                        </div>
+                    </div>
+                     <div class="blocks micro">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="dashboard_description">
+            <div class="main-div">
+                <div _ngcontent-ng-c1852626429="" class="background">
+                    <div _ngcontent-ng-c1852626429="" class="dashboards"></div>
+                    <div _ngcontent-ng-c1852626429="" class="small9"></div>
+                    <div _ngcontent-ng-c1852626429="" class="small10"></div>
+                </div>
+                <h3>Real-Time IoT Security Dashboards</h3>
+                <p>
+                    IoTGuard provides dynamic security dashboards for
+                    real-time visualization of device behavior and threat activity. It ensures rapid detection and
+                    mitigation of potential risks across a broad range of IoT scenarios.
+                </p>
+
+            </div>
+        </section>
+
+        <section id="rule-engine">
+            <div class="main-div">
+                <div class="rule hidden" data-loading="false">
+                    <a class="rule-button img-button" href="/docs/user-guide/rule-engine-2-0/re-getting-started/">
+                        <div class="overlay">
+                            <div class="eye"><i class="far fa-eye"></i>See more about IoT Rule Engine</div>
+                        </div><img src="https://img.thingsboard.io/demo/send-email-rule-chain.gif"
+                            alt="Send email rule chain creation" width="890" height="375" loading="lazy">
+                    </a>
+                    <div class="des">
+                        <h3>IoT Rule Engine</h3>
+                        <p>IoTGuard allows you to create complex <a
+                                href="/docs/user-guide/rule-engine-2-0/re-getting-started/">Rule Chains</a> to process
+                            data from your devices and match your application specific use cases.</p>
+                        <a class="read-more-button" href="/docs/user-guide/rule-engine-2-0/re-getting-started/">Read
+                            more about rule engine
+                            <i class="fas fa-chevron-right arrow first"></i>
+                            <i class="fas fa-chevron-right arrow second"></i>
+                            <i class="fas fa-chevron-right arrow third"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bottom-features">
+            <div class="main-div">
+                <div class="background">
+                    <div class="bottom-features1"></div>
+                    <div class="bottom-features2"></div>
+                    <div class="small11"></div>
+                    <div class="small12"></div>
+                    <div class="bottom-features3"></div>
+                    <div class="small13"></div>
+                    <div class="small14"></div>
+                    <div class="small15"></div>
+                </div>
+                <h3>IoTGuard Features</h3>
+                <div id="cards" class="row">
+                    <div class="col-lg-6">
+                        <div class="blocks">
+                            <img src="https://img.thingsboard.io/telemetry-icon.svg" alt="Telemetry data collection"
+                                loading="lazy">
+                            <div>
+                                <a class="title">Real-Time Threat Detection and Analysis</a>
+                                <p class="contentabc">Continuously monitor IoT data in real time to identify unusual patterns, suspicious
+                                    activities, and
+                                    potential threats. IoTGuard flags anomalies as soon as they occur, enabling swift
+                                    containment and
+                                    minimizing security risks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/tenancy-icon.svg"
+                                alt="Multi tenancy available" loading="lazy">
+                            <div>
+                                <a class="title">Machine Learning Integration</a>
+                                <p class="contentabc">Incorporate powerful algorithms such as Random Forest and XGBoost for continual
+                                    learning. These
+                                    models adapt to evolving attack vectors, achieving higher detection rates while
+                                    reducing false positives.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/visualization-icon.svg"
+                                alt="Data visualization providing" loading="lazy">
+                            <div>
+                                <a class="title">User Interface and Visualizationn</a>
+                                <p class="contentabc">Benefit from an intuitive web-based interface that offers clear, customizable
+                                    dashboards and visual
+                                    representations. Users can effortlessly track device status, monitor threats, and
+                                    gain actionable insights for
+                                    efficient decision-making.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/scalability-icon.svg"
+                                alt="Scalability available" loading="lazy">
+                            <div>
+                                <a class="title">Reporting and Mitigation</a>
+                                <p class="contentabc">Receive real-time alerts, generate detailed threat reports, and follow recommended
+                                    steps for incident
+                                    response. IoTGuard’s automated mitigation features allow users to isolate
+                                    compromised devices or block
+                                    malicious traffic immediately, safeguarding the wider IoT environment.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/engine-icon.svg" alt="IoT rule engine"
+                                loading="lazy">
+                            <div>
+                                <a class="title">Device Data Upload and Validation</a>
+                                <p class="contentabc">Users can upload IoT telemetry and network data, with built-in validations to ensure
+                                    file types, sizes, and
+                                    formats are correct. This ensures that only high-quality, processable data enters
+                                    the analysis pipeline.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/tolerance-icon.svg"
+                                alt="Fault tolerance" loading="lazy">
+                            <div>
+                                <a class="title">Automated IoT Traffic Analysis</a>
+                                <p class="contentabc">The system processes uploaded IoT traffic using machine learning algorithms (Random
+                                    Forest and
+                                    XGBoost) to automatically identify anomalies and detect potential security threats
+                                    without manual
+                                    intervention</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+
+<footer>
+    <div class="light-text main-div">
+        <div class="deeper">
+            <div class="flex align-items-center	gap-3 text-2xl font-bold text-white-alpha-90">
+                <img src="/assets/image/dataA-logo.png" width="60" height="60">
+                <h1>IoTGuard</h1>
+            </div>
+            <nav>
+                <div class="microsoft-icons">
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/facebook.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/twitter-bird.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/instagram.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/youtube.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/linkedin.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/github.svg">
+                        </a>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <div class="deepmost">
+            <div class="copyright">© 2025 The IOT Guard Authors</div>
+        </div>
+    </div>
+</footer>
